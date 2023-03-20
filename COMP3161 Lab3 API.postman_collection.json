@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "9a08264f-d0b3-47cc-8868-199f74007519",
+		"name": "COMP3161 Lab3 API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26434799"
+	},
+	"item": [
+		{
+			"name": "customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/customers",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer/<customer_id>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/customer/80",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"customer",
+						"80"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CustomerID\" : 2001,\r\n    \"Gender\" : \"Male\",\r\n    \"Age\" : 19,\r\n    \"AnnualIncome\" : 15000,\r\n    \"SpendingScore\" : 20,\r\n    \"Profession\" : \"HealthCare\",\r\n    \"WorkExperience\" : 1,\r\n    \"FamilySize\" : 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/add_customer",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"add_customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_profession/<customer_id>",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Profession\" : \"Artist\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/update_profession/2001",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"update_profession",
+						"2001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "highest_income_report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/highest_income_report",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"highest_income_report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "total_income_report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/total_income_report",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"total_income_report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "average_work_experience",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/average_work_experience",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"average_work_experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "average_spending_score/<profession>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/average_spending_score/Lawyer",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"average_spending_score",
+						"Lawyer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
